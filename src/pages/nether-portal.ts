@@ -31,7 +31,7 @@ export const pagina: Pagina = {
     .np label { display: grid; gap: 6px; font-size: 0.85rem; color: var(--apagado); }
     .np select, .np input {
       padding: 10px 12px;
-      border-radius: 8px;
+      border-radius: 8px; 
       border: 1px solid var(--borde);
       background: #1a1a20;
       color: var(--texto);
