@@ -16,16 +16,16 @@ if (!app) throw new Error('Falta <main id="app"> en index.html');
 function mostrar(pagina: Pagina): void {
   document.title = pagina.titulo;
   hojaPagina.replaceSync(pagina.estilos);
-  app.replaceChildren();
-  pagina.renderizar(app);
+  app!.replaceChildren();
+  pagina.renderizar(app!);
   window.scrollTo(0, 0);
 }
 
 function vista404(ruta: string): void {
   document.title = 'Página no encontrada';
   hojaPagina.replaceSync('');
-  app.replaceChildren();
-  app.innerHTML = `
+  app!.replaceChildren();
+  app!.innerHTML = `
     <a class="volver" href="#/">← Volver al inicio</a>
     <p class="vacio">🤷 No existe la ruta <code>#/${ruta}</code></p>
   `;
